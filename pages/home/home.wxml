@@ -22,3 +22,6 @@
 <!--3.展示用户信息的方式-->
 <open-data type="userNickName"></open-data>
 <open-data type="userAvatarUrl"></open-data>
+
+<!--展示从接口拿到的数据-->
+<view bindtap="handlaViewClick">{{code}}</view>
