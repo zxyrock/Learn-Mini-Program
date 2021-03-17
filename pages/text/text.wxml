@@ -1,0 +1,25 @@
+<!--pages/text/text.wxml-->
+<!--text组件为行内元素，可以在文本末尾加上\n来换行-->
+<text>text组件的使用\n</text>
+<text>Hello World\n</text>
+
+<!--text组件的属性：selecctable:true-->
+<!--1.默认情况下，text中的文本长按是不能被选中的,但selecctable的值设为true时可以更改-->
+<!--有以下两种写法：1.用{{}}包裹  2.赋值，默认true-->
+<text selectable="{{true}}">你好小程序\n</text>
+<text selectable>你好小程序\n</text>
+
+<!--space属性:决定文本空格的大小-->
+<text>hello world\n</text>
+<!--值：nbsp，根据字体设置的空格大小-->
+<text space="nbsp">hello world\n</text>
+<!--值：ensp，中文字符空格的一半大小-->
+<text space="ensp">hello world\n</text>
+<!--值：emsp，中文字符空格的大小-->
+<text space="emsp">hello world\n</text>
+
+<!--decode属性：是否解码文本，同样两种写法-->
+<text>5 &gt; 3\n</text>
+<text decode="{{true}}">5 &gt; 3\n</text>
+<text decode>5 &gt; 3</text>
+
