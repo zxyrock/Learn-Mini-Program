@@ -1,0 +1,33 @@
+<!--pages/image/image.wxml-->
+<text>image组件的基本使用</text>
+
+<!--重点：1.image组件可以写成单便签，也就可以写成双标签
+          2.image组件默认自己的大小：320*240（无论任何屏幕下）
+          3.image组件是一个行内块级元素(liine-block)-->
+<!-- <image/> -->
+<text>hello world</text>
+
+<!--2.src:本地地址（相对路径/绝对路径）/远程地址-->
+<image src="../../asset/test/rock.jpg"></image>
+<image src="/asset/test/rock.jpg"></image>
+<image src="https://cn.vuejs.org/images/logo.png"></image>
+
+<!--补充：显示相册中的图片-->
+<button bindtap="handleChooseAlbum">选中相册图片</button>
+<image src="{{imagePath}}"></image>
+
+<!--3.bindload：监听图片加载完成了-->
+<!--4.lazy-load:懒加载，当图片进入一定范围的时候（上下三屏）时才进行加载-->
+<view>-------------------</view>
+<image wx:for="{{5}}" 
+src="https://cn.vuejs.org/images/logo.png"
+bindload="handleImageLoad"
+lazy-load="{{true}}"
+></image>
+
+<!--5.show-menu-by-longpress:长按图片出现识别小程序码（只能用于识别为用于小程序码）-->
+<image show-menu-by-longpress
+      src="../../asset/test/123.png"
+></image>
+
+<!--6.mode:拉伸模式，有很多可选值，看官方文档-->
