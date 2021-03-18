@@ -1,0 +1,30 @@
+<!--pages/button/button.wxml-->
+<text>button组价的基本使用</text>
+<!--1.button组件默认块级元素-->
+<button>按钮1</button>
+
+<!--2.size属性：mini，小尺寸，且变成行内块级元素-->
+<button size="mini">按钮2</button>
+<button size="mini">按钮2</button>
+<view></view>
+
+<!--3.type属性：设置颜色-->
+<button size="mini" type="default">按钮3</button>
+<button size="mini" type="primary">按钮3</button>
+<button size="mini" type="warn">按钮3</button>
+<view></view>
+
+<!--4.plain属性：镂空效果-->
+<button size="mini" plain>按钮4</button>
+<view></view>
+
+<!--5.disabled属性：禁用-->
+<button size="mini" disabled>按钮5</button>
+<view></view>
+
+<!--6.loading属性:加载效果-->
+<button size="mini" loading="{{isLoading}}">按钮6</button>
+<view></view>
+
+<!--7.hover-class属性：-->
+<button hover-class="pressed">按钮7</button>

@@ -1,0 +1,29 @@
+<!--pages/view/view.wxml-->
+<text>vire的基本使用</text>
+
+<!--1.容器，块级元素-->
+<view class="box">
+哈哈哈
+ <text>view\n</text>
+ <button size="mini" type="warn">按钮</button>
+</view>
+
+<!--2.hover-class:当前用户按下组件时，显示的状态-->
+<!--3.hover-start-time:当前用户按下组件后，多久开始显示变化-->
+<!--4.hover-stay-time:当前用户松开组件后，多久开始显示变化-->
+<view class="box1"
+ hover-class="hover-view"
+ hover-start-time="{{50}}"
+ hover-stay-time="{{400}}"
+ >box1</view>
+
+<!--5.hover-stop-propagation:阻止冒泡，避免触发祖先元素的点击事件-->
+<view class="box2" hover-class="box2-hover">
+  <view class="box1"
+      hover-class="hover-view"
+      hover-start-time="{{50}}"
+      hover-stay-time="{{400}}"
+      hover-stop-propagation="{{true}}">
+      box1
+  </view>
+</view>
