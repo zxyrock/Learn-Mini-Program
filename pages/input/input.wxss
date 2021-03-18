@@ -1,0 +1,16 @@
+/* pages/input/input.wxss */
+input{
+  border:1px solid rgb(87, 224, 224);
+  margin:10px 30px;
+  padding-left: 5px;
+  color: rgb(235, 97, 43);
+}
+view{
+  text-align: center;
+}
+text{
+ padding:10px 70px;
+}
+input:nth-last-child(1){
+  margin-bottom: 100px;
+}

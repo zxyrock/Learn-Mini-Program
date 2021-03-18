@@ -1,0 +1,42 @@
+<!--pages/input/input.wxml-->
+<text>input组件的基本使用</text>
+<input type="text"/>
+
+<!--1.value:inputs的默认值-->
+<view>value属性</view>
+<input value="Hello World"/>
+
+<!--2.type:决定键盘的类型(英文字母+其他符号/数字/身份证号)-->
+<!--text:文本输入键盘-->
+<view>text：文本键盘</view>
+<input type="text"/>
+<!--number:数字键盘-->
+<view>number：数字键盘</view>
+<input type="number"/>
+<!--idcard:身份证输入键盘-->
+<view>idcard：身份证键盘</view>
+<input type="idcard"/>
+<!--digit:带小数点的数字键盘-->
+<view>digit：带小数点的数字键盘</view>
+<input type="digit"/>
+
+<!--3.password：暗文，用于输入密码-->
+<view>password:暗文，用于输入密码</view>
+<input password/>
+
+<!--4.placeholde：占位文字-->
+<view>placeholde：占位文字</view>
+<input placeholder="请输入内容"/>
+
+<!--5.confirm-type：键盘右下角用于显示的文字，如：完成，搜索-->
+<view>confirm-type：键盘右下角用于显示的文字，如：完成，搜索</view>
+<input confirm-type="send" placeholder="send值：发送"/>
+<input confirm-type="search" placeholder="search值：搜索"/>
+<input confirm-type="next" placeholder="next值：下一个"/>
+<input confirm-type="go" placeholder="go值：前往"/>
+<input confirm-type="done" placeholder="done值：发送"/>
+
+<!--6.input:绑定事件,bindinput:绑定事件， bindfocus：获取焦点， bindblur：失去焦点 -->
+<input bindinput="handleInput"
+bindfocus="hanleFocus"
+bindblur="handleBlur"/>
