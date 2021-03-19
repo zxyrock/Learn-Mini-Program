@@ -1,0 +1,5 @@
+/* pages/wxss/wxss.wxss */
+.box{
+  color: greenyellow;
+  font-size: 30px;
+}
