@@ -1,3 +1,13 @@
 <!--pages/home/home.wxml-->
+<view>组价的共同属性</view>
+<!--1.id属性，class属性-->
 <text class="title">Hello World</text>
-<button size="mini">按钮</button>
+<button id="btn" size="mini">按钮</button>
+
+<!--2.style属性：行内样式-->
+<view style="color:red">我的小程序1</view>
+<!--3.hidden:隐藏-->
+<view hidden="{{true}}">我的小程序2</view>
+<view hidden="{{false}}">我的小程序3</view>
+<!--4.bind/catch:组件的事件-->
+<view bindtap="" catchtap="">哈哈哈</view>

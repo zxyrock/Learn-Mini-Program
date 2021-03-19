@@ -4,3 +4,6 @@
   font-size: 30px;
   display: flex;
 }
+#btn{
+  background: rgb(241, 121, 201);
+}
