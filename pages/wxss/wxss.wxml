@@ -1,0 +1,29 @@
+<!--pages/wxss/wxss.wxml-->
+<text>wxss中的单位：rpx</text>
+<!--前端需要进行配置尺寸的适配：em/rem/vw/vh-->
+<!--rpx单位会根据屏幕进行自适应-->
+<view class="box1"></view>
+<view class="box2"></view>
+
+<!--在iPhone6的屏幕上 1px=2rpx-->
+<view class="content1">Hello World</view>
+<view class="content2">Hello World</view>
+
+<button class="btn">按钮</button>
+
+<!--使用官方样式库去开发一个搜索框-->
+<view class="weui-search-bar {{inputShowed ? 'weui-search-bar_focusing' : ''}}" id="searchBar">
+  <form class="weui-search-bar__form">
+    <view class="weui-search-bar__box">
+      <i class="weui-icon-search"></i>
+      <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}"
+        bindinput="inputTyping" />
+      <span class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput"></span>
+    </view>
+    <label class="weui-search-bar__label" bindtap="showInput">
+      <i class="weui-icon-search"></i>
+      <span class="weui-search-bar__text">搜索</span>
+    </label>
+  </form>
+  <view class="weui-search-bar__cancel-btn" bindtap="hideInput">取消</view>
+</view>
