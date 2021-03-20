@@ -1,0 +1,29 @@
+<!--pages/wxml/wxml.wxml-->
+<text>wxml语法-列表渲染</text>
+<view>------wx:for的回顾-----</view>
+<!--1.遍历数组/字符串/数字-->
+<!-- <view wx:for="{{['abc','123','%&&']}}">{{index+1}}. {{item}}</view>
+<view wx:for="zxyrock">{{index+1}}. {{item}}</view>
+<view wx:for="{{3}}">{{item}}</view> -->
+
+<view>------block标签----</view>
+<!--block标签：不会被渲染出来，一般用于包裹标签，只接受控制属性-->
+<!--用处1：将需要进行遍历或者判断的内容进行包裹-->
+<!--用处2：将遍历和判断的属性放在block便签中，不影响普通属性的阅读，提高代码的可读性-->
+<!-- <block wx:for="{{3}}">
+  <view>{{index}}.hello world</view>
+</block> -->
+
+<view>------给item、index起名字，一般用于二维数组遍历时----</view>
+<!--给item、index起名字，一般用于二维数组遍历时-->
+<!-- <view wx:for="{{team}}" wx:for-item="everyone" wx:for-index="abc">{{abc}}.{{everyone}}</view>
+<block wx:for="{{nums}}" wx:for-item="some">
+  <block wx:for="{{some}}">
+    <view>{{item}}</view>
+  </block>
+</block> -->
+
+<view>------key的作用----</view>
+<!--key的作用：高效的更新虚拟DOM-->
+<!--这里是将item作为key放入，前提key是唯一标识，这里即遍历数组内的内容都是唯一，不会有重复-->
+<view wx:for="{{letters}}" wx:key="item">{{item}}</view>
