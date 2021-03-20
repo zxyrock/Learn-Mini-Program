@@ -1,0 +1,27 @@
+<!--pages/wxml/wxml.wxml-->
+<text>wxml语法：条件判断\n</text>
+<!--wx:if,值为true时，进行渲染，值为flase时，进行隐藏-->
+<button size="mini" bindtap="hendleSeitchShow">切换显示</button>
+<view wx:if="{{isShow}}">Hello World</view>
+<!--判断分数：>=90:优秀，>=80:良好，>=60:及格，<60:不及格-->
+  <button size="mini" bindtap="handleIncremnt">分数递增6分</button>
+  <button size="mini" bindtap="handlecremnt">分数递减6分</button>
+<view wx:if="{{score >= 100}}">{{score}}：优秀 只能增到100分</view>
+<view wx:elif="{{score >= 90}}">{{score}}：优秀</view>
+<view wx:elif="{{score >= 80}}">{{score}}：良好</view>
+<view wx:elif="{{score >= 60}}">{{score}}：及格</view>
+<view wx:elif="{{score > 0}}">{{score}}：不及格</view>
+<view wx:else="{{score}}">{{score}}：不及格  只能减到0分</view>
+
+<!--hidden属性-->
+<!--wx:if与hidden在隐藏组件时的区别-->
+<!--hidden：将组件隐藏起来是，该组价依然是存在的，它是将display属性设定为none了-->
+<!--wx:if:将组件隐藏起来时，该组件根本不存在，压根没有创建-->
+<!--选择：如果显示和隐藏的频率非常高，选择hidden；-->
+<!--如果显示和隐藏的频率非常低，使用wx:if-->
+<view wx:if="{{flase}}">我是wx:if属控制的内容</view>
+<view hidden="{{false}}">我是hidden属性指定的内容</view>
+
+
+
+
