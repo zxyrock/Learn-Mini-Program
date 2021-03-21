@@ -1,0 +1,16 @@
+
+  // JS代码，注：不能写ES6的语法，只能写ES5的
+  // 自定义一些数据
+  var message = "你好小程序";
+  var name = "zxyrock";
+  var age = 23;
+  var sum = function(num1,num2){
+    return num1 + num2
+  }
+  // 导出，只有将之导出才能使用。使用commonjs的模块化语法：module.exports
+  module.exports = {
+     message:message,
+     name:name,
+     age:age,
+     sum:sum
+  }

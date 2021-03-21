@@ -1,0 +1,31 @@
+<!--pages/wxs/wxs.wxml-->
+<text>wxs的两种写法</text>
+<!--1.wxs的定义方式,，需要添加module属性，作为唯一标识-->
+<wxs module="something">
+  // JS代码，注：不能写ES6的语法，只能写ES5的
+  // 自定义一些数据
+  var message = "Hello World";
+  var name = "孙悟空";
+  var age = 600;
+  var sum = function (num1, num2) {
+    return num1 + num2
+  }
+  // 导出，只有将之导出才能使用。使用commonjs的模块化语法：module.exports
+  module.exports = {
+    message: message,
+    name: name,
+    age: age,
+    sum: sum
+  }
+</wxs>
+
+<view>{{something.message}}</view>
+<view>{{something.name+' '+something.age}}</view>
+<view>{{something.sum(20,30)}}</view>
+
+<!--2.定义在单独的wxs文件中，再使用<wxs>标签进行导入-->
+<wxs src="/wxs/info.wxs" module="info" />
+
+<view>{{info.message}}</view>
+<view>{{info.name+' '+info.age}}</view>
+<view>{{info.sum(70,30)}}</view>
