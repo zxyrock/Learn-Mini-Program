@@ -4,3 +4,11 @@
   font-size: 30px;
   display: flex;
 }
+
+.box{
+  width: 300rpx;
+  height: 300rpx;
+  background: pink;
+  margin: 20rpx;
+  display: inline-block;
+}

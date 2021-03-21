@@ -1,3 +1,30 @@
 <!--pages/home/home.wxml-->
-<text class="title">Hello World</text>
-<button size="mini">按钮</button>
+<view>常见事件类型</view>
+<button size="mini" bindtap="handleBtnClick">按钮1</button>
+<button size="mini" bind:tap="handleBtnClick">按钮2</button>
+<button size="mini" catch:tap="handleBtnClick">按钮3</button>
+
+<!--常见的一些事件-->
+<!--bindtouchstart事件：手指开始触摸时触发-->
+<view class="box"
+      bind:touchstart="handleTouchStart">
+      bindtouchstart事件：手指开始触摸
+</view>
+
+<!--bindtouchmovet事件：手指开始移动时触发-->
+<view class="box"
+      bind:touchmove="handleTouchMove">
+      bindtouchmovet事件：手指开始移动
+</view>
+
+<!--bindtouchendet事件：手指结束触摸时触发-->
+<view class="box"
+      bind:touchend="handleTouchEnd">
+      bindtouchendet事件：手指结束触摸
+</view>
+
+<!--bindlongpresst事件：手指触摸后，超过350ms再离开便触发，触发该事件后，tap事件将不再被触发-->
+<view class="box"
+      bind:longpress="handleLongPreess">
+      bindlongpresst事件：手指触摸后，超过350ms再离开便触发，触发该事件后，tap事件将不再被触发
+</view>
