@@ -1,0 +1,17 @@
+// 价格格式化
+function priceFromat(price,number){
+  var number = number || 2;
+  var f_price = parseFloat(price)
+  return f_price.toFixed(number)
+}
+
+// 时间格式化
+var formatTime = function(time,format){
+ return "2021/3/21 23:00:00"
+}
+
+
+module.exports ={
+  priceFromat:priceFromat,
+  formatTime:formatTime
+}
