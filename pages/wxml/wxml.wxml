@@ -1,0 +1,25 @@
+<!--pages/wxml/wxml.wxml-->
+<text>wxml语法：wxml导入</text>
+<include src="/wxml/head.wxml" />
+
+<view>----template----</view>
+<!--以前的小程序不支持自定义组件，为了进行代码的复用：template-->
+<!--自定义模板需要有name属性，并且模板包裹的内容，在没有被使用前是不会被渲染的-->
+<!-- <template name="contentItem">
+  <button size="mini">{{btnText}}</button>
+  <view>{{content}}</view>
+</template> -->
+
+<!--引入外部模板，用import标签，用src属性确定路径-->
+<import src="/wxml/template.wxml" />
+
+<!--使用模板，用is属性确定使用的是哪个模板,用data属性传入变量内容-->
+<template is="contentItem" data="{{btnText:'按钮1',content:'Hello'}}" />
+<template is="contentItem" data="{{btnText:'按钮2',content:'World'}}"/>
+<!--注：template模板不能进行递归导入，即套娃，在a模板的网页导入其他b模板。通过导入a模板的网页拿到b模板是不行的-->
+
+
+<!--导入模板用impport，include是不能导入模板的-->
+
+<include src="/wxml/footer.wxml" />
+
