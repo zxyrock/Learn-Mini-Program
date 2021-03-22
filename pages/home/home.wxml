@@ -1,3 +1,12 @@
 <!--pages/home/home.wxml-->
-<text class="title">Hello World</text>
-<button size="mini">按钮</button>
+<view>事件冒泡和事件捕获~bind与canth的区别</view>
+<!--监听事件捕获：captrue-bind:tap（注：必须用bind:tap的方式写）-->
+<!--bind:会一层层传递-->
+<!--catch：会阻止事件的进一步传递-->
+<view class="view1" capture-catch:tap="handleCaptureView1" bindtap="handleBindView1">view1
+  <view class="view2" capture-bind:tap="handleCaptureView2" bindtap="handleBindView2">view2
+    <view class="view3" capture-bind:tap="handleCaptureView3" bindtap="handleBindView3">view3
+
+    </view>
+  </view>
+</view>
