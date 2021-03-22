@@ -5,21 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+     titles:['衣服','裤子','鞋子']
   },
-  handleBtnClick(){
-    console.log('按钮被点击')
-  },
-  handleTouchStart(){
-    console.log("开始触摸")
-  },
-  handleTouchMove(){
-    console.log("手指开始移动")
-  },
-  handleTouchEnd(){
-    console.log("手指结束触摸")
-  },
-  handleLongPreess(){
-    console.log("手指按的时间超过350ms")
+  handleViewClick(event){
+    console.log(event)
+    const dataset = event.currentTarget.dataset;
+    const index = dataset.index;
+    const item = dataset.item;
+    console.log(index,item)
   }
 })
