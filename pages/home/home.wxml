@@ -1,3 +1,7 @@
 <!--pages/home/home.wxml-->
 <text class="title">Hello World</text>
 <button size="mini">按钮</button>
+
+<!--2.使用自定义组件-->
+<my-cpn></my-cpn>
+<my-cpn/>
