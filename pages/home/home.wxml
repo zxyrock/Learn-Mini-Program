@@ -4,6 +4,11 @@
 <!--1.给自定义组件传递数据和样式-->
 <my-prop title="哈哈哈" titleclass="blue"/>
 <my-prop title="呵呵呵" titleclass="yellow"/>
-<my-prop title="嘿嘿嘿" titleclass="green"/>
+<my-prop title="嘿嘿嘿" titleclass="bolck"/>
 <my-prop/>
 <!--注：传递样式名时不要用驼峰式命名,且组件内不要写同样的样式，会以自定义组件内样式优先-->
+
+<!--2.组件内部发出事件-->
+<view>当前计数：{{counter}}</view>
+<!--  用bind来监听组件发射过来的事件 -->
+<my-event bind:increment="handleIncrement"/>
