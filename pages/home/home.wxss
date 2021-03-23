@@ -4,3 +4,12 @@
   font-size: 30px;
   display: flex;
 }
+.blue{
+  color:blue;
+}
+.yellow{
+  color:yellow;
+}
+.green{
+  color:green;
+}
