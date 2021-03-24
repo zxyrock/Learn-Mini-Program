@@ -12,3 +12,7 @@
 <view>当前计数：{{counter}}</view>
 <!--  用bind来监听组件发射过来的事件 -->
 <my-event bind:increment="handleIncrement"/>
+
+<!--3.自定义组件：w-tab-control-->
+<w-tab-control titles="{{['衣服','裤子','鞋子','帽子']}}"
+                bind:itemclick="tabControlClick"/>
