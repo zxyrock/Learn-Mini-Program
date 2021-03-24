@@ -21,3 +21,28 @@
 <button size="mini" bindtap="handleIncrementCpn">修改组件内的数据</button>
 <!--这里可以绑定class或id，一般建议绑定id来作为组件的唯一标识-->
 <my-sel class="sel-class" id="sel-id"/>
+
+<view>------------------------------</view>
+<!--5.插槽slot的使用-->
+<!--5.1.单个插槽的使用-->
+<my-slot>
+  <text>我是插入的内容：Hello World</text>
+</my-slot>
+<my-slot>
+  <button size="mini">插入的按钮</button>
+</my-slot>
+<my-slot>
+  <!--slider组件：可拖动的滑块，可设置属性：value，值为数字，即滑块的默认值-->
+  <slider value="50"></slider>
+</my-slot>
+
+<!--5.2.多个插槽的使用-->
+<!--注意事项（使用多插槽的前提条件）：
+  1.给每一个插槽起一个名字：name属性
+  2.必须在Compontent对象中添加一个选项：options -> multipleSlots:true
+-->
+<my-mslot>
+  <button size="mini" slot="slot2">我是插入的按钮</button>
+  <slider slot="slot1" />
+  <text slot="slot3">Hello World</text>
+</my-mslot>
