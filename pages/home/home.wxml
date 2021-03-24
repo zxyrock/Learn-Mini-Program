@@ -16,3 +16,8 @@
 <!--3.自定义组件：w-tab-control-->
 <w-tab-control titles="{{['衣服','裤子','鞋子','帽子']}}"
                 bind:itemclick="tabControlClick"/>
+
+<!--4.直接选中组件修改数据/调用方法-->
+<button size="mini" bindtap="handleIncrementCpn">修改组件内的数据</button>
+<!--这里可以绑定class或id，一般建议绑定id来作为组件的唯一标识-->
+<my-sel class="sel-class" id="sel-id"/>
