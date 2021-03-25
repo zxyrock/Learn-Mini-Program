@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    counter:0
-
+    counter:0,
+    isShow:true
   },
   // 组件传递过来的数据对象在event中的detail中
   handleIncrement(event){
@@ -32,5 +32,10 @@ Page({
 
     // 3.通过调用组件自己的方法对数据进行修改
     my_sel.incrementCounter(10)
+  },
+  handleChangeShow(){
+    this.setData({
+      isShow:!this.data.isShow
+    })
   }
 })
