@@ -1,15 +1,1 @@
 /* pages/home/home.wxss */
-.title{
-  color: aqua;
-  font-size: 30px;
-  display: flex;
-}
-.blue{
-  color:blue;
-}
-.yellow{
-  color:yellow;
-}
-.green{
-  color:green;
-}

@@ -1,6 +1,0 @@
-/* components/cpn1/cpn1.wxss */
-.box{
-  background: pink;
-  color: #ffffff;
-  font-size: 60rpx;
-}
