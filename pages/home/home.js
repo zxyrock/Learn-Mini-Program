@@ -173,7 +173,13 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-    
+  onShareAppMessage: function (options) {
+    return {
+      title:'转发时显示的标题',
+      // path:转发路径，必须是以/开头的完整路径
+      path:'/pages/home/home.wxml',
+      // imageUrl:自定义展示图片的路径，默认是截图，显示长宽比为5:4
+      imageUrl:'../../asset/img/rock.jpg'
+    }
   }
 })

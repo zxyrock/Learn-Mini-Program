@@ -17,3 +17,7 @@
 <!--4。actionSheet弹窗:底部弹窗-->
 <button size="mini" bindtap="handleActionSheet">showActionSheet</button>
 <view></view>
+
+<!--5.分享按钮-->
+<!--属性： open-type="share"可以直接分享-->
+<button size="mini" open-type="share">分享</button>
