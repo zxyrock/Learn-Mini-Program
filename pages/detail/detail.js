@@ -19,10 +19,15 @@ Page({
     // console.log(pages)
     // 2.获取首页的页面
     const home = pages[pages.length -2]
-    // 3.调用页面对象的方法
+    // 3.调用页面对象的方法，修改数据
     home.setData({
       title:"呵呵呵~~！"
     })
-
+  },
+  // 自定义页面跳转返回函数
+  handleBack(){
+    wx.navigateBack({
+      delta: 0,
+    })
   }
 })

@@ -8,6 +8,12 @@ Page({
   data: {
     title:"哈哈哈~~~"
   },
+  // 代码跳转页面的函数
+  handlePushdetail(){
+    wx.navigateTo({
+      url: '/pages/detail/detail',
+    })
+  },
   handleShowToast(){
     wx.showToast({
       // title:设置弹窗显示内容,文本最多显示 7 个汉字长度
