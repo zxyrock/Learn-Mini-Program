@@ -1,4 +1,0 @@
-<!--pages/comment/comment.wxml-->
-<text>pages/comment/comment.wxml</text>
-<!-- delta：设置返回的层级，取值为数字-->
-<navigator open-type="navigateBack" delta="2">返回首页</navigator>
