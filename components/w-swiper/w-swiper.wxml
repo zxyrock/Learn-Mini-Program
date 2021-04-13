@@ -1,5 +1,5 @@
 <!--components/w-swiper/w-swiper.wxml-->
-<!--1.展示轮播图:swiper组件-->
+<!--1.展示轮播图:swiper组件，注：轮播图有个默认的高度为150px-->
 <!--swiper的circular属性可以设置图片衔接循环轮播-->
 <!--swiper的autoplay属性可以设置图片自动轮播-->
 <!--swiper的interval属性可以设置图片轮播的时间，默认值是5秒钟-->
@@ -15,7 +15,7 @@
         indicator-dots="true"
         indicator-active-color="#ff5777">
   <!--遍历最好使用block组件-->
-  <block wx:for="{{list}}" wx:key="{{index}}">
+  <block wx:for="{{list}}" wx:key="{{item}}">
     <swiper-item class="swiper-item">
       <!--image的mode属性设置为widthFix时，image的宽高会根据图片大小显示正确的比例-->
       <image src="{{item.image}}" mode="widthFix" />
