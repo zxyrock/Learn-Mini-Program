@@ -1,0 +1,24 @@
+<!--components/w-swiper/w-swiper.wxml-->
+<!--1.展示轮播图:swiper组件-->
+<!--swiper的circular属性可以设置图片衔接循环轮播-->
+<!--swiper的autoplay属性可以设置图片自动轮播-->
+<!--swiper的interval属性可以设置图片轮播的时间，默认值是5秒钟-->
+<!--swiper的duration属性可以设置图片滑动动画时长，默认值是500毫秒-->
+<!--swiper的indicator-dots属性可以设置是否显示面板指示点-->
+<!--swiper的indicator-color属性可以设置指示点颜色-->
+<!--swiper的indicator-active-color属性可以设置当前选中的指示点颜色-->
+<swiper class="swiper"
+        circular="true"
+        autoplay="true"
+        interval="3000"
+        duration="300"
+        indicator-dots="true"
+        indicator-active-color="#ff5777">
+  <!--遍历最好使用block组件-->
+  <block wx:for="{{list}}" wx:key="{{index}}">
+    <swiper-item class="swiper-item">
+      <!--image的mode属性设置为widthFix时，image的宽高会根据图片大小显示正确的比例-->
+      <image src="{{item.image}}" mode="widthFix" />
+    </swiper-item>
+  </block>
+</swiper>

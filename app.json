@@ -6,7 +6,7 @@
     "pages/profile/profile"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#4facfe",
+    "navigationBarBackgroundColor": "#ff5777",
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "购物街",
     "backgroundColor": "#eeeeee",
@@ -14,7 +14,7 @@
     "enablePullDownRefresh": false
   },
   "tabBar": {     
-    "selectedColor": "#4facfe",
+    "selectedColor": "#ff5777",
     "list": [
       {
         "pagePath": "pages/home/home",
