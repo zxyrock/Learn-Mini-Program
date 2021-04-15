@@ -36,7 +36,7 @@ Page({
         icon:"loading",
         duration:3000
       })
-    })
+    }) 
 
   },
 

@@ -3,3 +3,5 @@
 <w-swiper list="{{banners}}" />
 <!--2.展示推荐数据-->
 <w-recommends recommends="{{recommends}}"/>
+<!--3.展示本周流行-->
+<w-popular/>
