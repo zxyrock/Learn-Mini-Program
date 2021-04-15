@@ -10,7 +10,8 @@ Page({
    */
   data: {
     banners:[],
-    recommends:[]
+    recommends:[],
+    titles:['流行','新款','精选']
 
   },
 
@@ -37,6 +38,12 @@ Page({
         duration:3000
       })
     }) 
+
+  },
+  tabControlClick(event){
+     // 取出index
+     const index = event.detail.index;
+     console.log(index)
 
   },
 

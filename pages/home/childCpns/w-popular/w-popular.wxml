@@ -1,4 +1,5 @@
 <!--pages/home/childCpns/w-popular/w-popular.wxml-->
+<!--3.展示本周流行-->
 <view class="popular">
   <image src="/assets/home/popular.jpg" mode="widthFix"></image>
 </view>
