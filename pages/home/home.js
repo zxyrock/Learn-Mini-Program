@@ -4,6 +4,9 @@ import {
   getGoogsData
 }from "../../service/home.js"
 
+// 请求的类型
+const types =['pop','new','sell']
+
 Page({
 
   /**
@@ -17,7 +20,9 @@ Page({
       'pop':{page:0,list:[]},
       'new':{page:0,list:[]},
       'sell':{page:0,list:[]}
-    }
+    },
+    // 用于记录商品请求的类型，默认是流行的pop
+    currentType:'pop'
 
   },
 
@@ -88,10 +93,14 @@ Page({
 
   // -----------------事件监听函数-----------------
   tabControlClick(event){
-     // 取出index
+    // 1.取出index
      const index = event.detail.index;
-     console.log(index)
+    //  console.log(index)
 
+    // 2.通过index设置currentType
+    this.setData({
+      currentType:types[index]
+    })
   },
 
   /**
