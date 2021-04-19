@@ -1,7 +1,7 @@
 /* components/w-tab-control/w-tab-control.wxss */
 .tab-control{
-  font-size: 38rpx;
-  font-weight: 550;
+  font-size: 32rpx;
+  font-weight: 500;
   display: flex;
   height: 88rpx;
   line-height: 88rpx;
@@ -16,6 +16,6 @@
   color: red;
 }
 .active text{
-  padding: 18rpx 20rpx;
+  padding: 14rpx 20rpx;
   border-bottom: 4rpx solid red;
 }

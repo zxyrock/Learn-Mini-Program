@@ -8,3 +8,4 @@
 <!--4.展示w-tab-control-->
 <w-tab-control titles="{{titles}}"
                 bind:itemclick="tabControlClick"/>
+<!--5.展示商品数据-->
