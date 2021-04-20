@@ -4,6 +4,8 @@ import {
   getGoogsData
 }from "../../service/home.js"
 
+// 定义页面滚动多少距离时，显示回到顶部的图标
+const TOP_DISTANCE = 1000;
 // 请求的类型
 const types =['pop','new','sell']
 
@@ -22,7 +24,9 @@ Page({
       'sell':{page:0,list:[]}
     },
     // 用于记录商品请求的类型，默认是流行的pop
-    currentType:'pop'
+    currentType:'pop',
+    // 回到顶部图标的显示，默认不显示
+    showBackTop:false
 
   },
 
@@ -101,6 +105,23 @@ Page({
     this.setData({
       currentType:types[index]
     })
+  },
+  // 监听页面滚动
+  onPageScroll(options){
+    // console.log(options)
+    // 1.取出scrollTop
+    const scrollTop = options.scrollTop;
+
+    // 2.通过scrollTop的值，修改data中shoeBackTop的值
+    // 官方提醒：不要在滚动的函数中频繁地调用this.setData()函数，因为会导致刷新频繁，占用资源
+    // 解决方法：下方，先将布尔值保存，再通过if判断，可以减少this.setData()的调用，提高一点性能
+    const flag = scrollTop >= TOP_DISTANCE;
+    if(flag != this.data.showBackTop){
+      this.setData({
+        showBackTop : scrollTop >= TOP_DISTANCE
+      })
+    }
+   
   },
 
   /**

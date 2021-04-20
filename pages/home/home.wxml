@@ -10,3 +10,6 @@
                 bind:itemclick="tabControlClick"/>
 <!--5.展示商品数据-->
 <w-goods goods="{{goods[currentType].list}}" />
+<!--6.回到顶部-->
+<!--注：这里使用wx:if来隐藏组件而不使用hidden是因为，hidden属性对于自定义组件是无效的-->
+<w-back-top wx:if="{{showBackTop}}" />
