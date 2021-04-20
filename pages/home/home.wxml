@@ -2,12 +2,15 @@
 <!--1.展示轮播图-->
 <w-swiper list="{{banners}}" />
 <!--2.展示推荐数据-->
-<w-recommends recommends="{{recommends}}"/>
+<w-recommends recommends="{{recommends}}" bind:imageload="handleImageLoad"/>
 <!--3.展示本周流行-->
 <w-popular/>
 <!--4.展示w-tab-control-->
 <w-tab-control titles="{{titles}}"
-                bind:itemclick="tabControlClick"/>
+                bind:itemclick="tabControlClick"
+                id="tab-control"
+                class="{{isTabFixed ? 'fixed' : ''}}"/>
+<w-tab-control titles="{{titles}}" wx:if="{{isTabFixed}}" />
 <!--5.展示商品数据-->
 <w-goods goods="{{goods[currentType].list}}" />
 <!--6.回到顶部-->

@@ -1,12 +1,13 @@
 /* components/w-tab-control/w-tab-control.wxss */
 .tab-control{
-  font-size: 32rpx;
+  font-size: 36rpx;
   font-weight: 500;
   display: flex;
   height: 88rpx;
   line-height: 88rpx;
-  margin-bottom: 10rpx;
-  /* background: lightblue; */
+  /* margin-bottom: 10rpx; */
+  background: #ffffff;
+  padding-bottom: 10rpx;
 }
 .tab-item{
   flex:1;

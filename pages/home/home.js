@@ -26,7 +26,10 @@ Page({
     // 用于记录商品请求的类型，默认是流行的pop
     currentType:'pop',
     // 回到顶部图标的显示，默认不显示
-    showBackTop:false
+    showBackTop:false,
+    isTabFixed:false,
+    // w-tab-control组件距离顶部的距离，默认为0
+    tabScrollTop:0
 
   },
 
@@ -115,13 +118,30 @@ Page({
     // 2.通过scrollTop的值，修改data中shoeBackTop的值
     // 官方提醒：不要在滚动的函数中频繁地调用this.setData()函数，因为会导致刷新频繁，占用资源
     // 解决方法：下方，先将布尔值保存，再通过if判断，可以减少this.setData()的调用，提高一点性能
-    const flag = scrollTop >= TOP_DISTANCE;
-    if(flag != this.data.showBackTop){
+    const flag1 = scrollTop >= TOP_DISTANCE;
+    if(flag1 != this.data.showBackTop){
       this.setData({
-        showBackTop : scrollTop >= TOP_DISTANCE
+        showBackTop : flag1
       })
     }
+
+    // 3.修改isTabFixed属性
+    const flag2 = scrollTop >= this.data.tabScrollTop;
+    if(flag2 != this.data.isTabFixed){
+      this.setData({
+        isTabFixed:flag2
+      })
+    }
+
    
+  },
+  // 通过监听w-recommends组件的图片加载完成后获取到w-tab-control组件距离顶部的高度，并赋值到data中
+  handleImageLoad(){
+    // console.log('图片加载完成')
+    wx.createSelectorQuery().select('#tab-control').boundingClientRect(rect => {
+      // console.log(rect)
+      this.data.tabScrollTop = rect.top
+    }).exec()
   },
 
   /**

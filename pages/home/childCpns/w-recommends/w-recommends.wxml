@@ -3,7 +3,8 @@
 <view class="recommends">
   <block wx:for="{{recommends}}" wx:key="{{index}}">
     <view class="recommends-item">
-     <image src="{{item.image}}" />
+    <!-- image组件中的bindload属性：当图片载入完毕时触发-->
+     <image src="{{item.image}}" bindload="handleImageLoad" />
      <view>{{item.title}}</view>
     </view>
   </block>
