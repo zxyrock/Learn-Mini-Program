@@ -139,10 +139,12 @@ Page({
   },
 
   /**
-   * 页面上拉触底事件的处理函数
+   * 页面上拉触底事件的处理函数：即上拉加载更多
    */
   onReachBottom: function () {
-
+    //  console.log('页面滚动到底部')
+    // 上拉加载更多 -> 请求更多数据
+    this._getGoodsData(this.data.currentType)
   },
 
   /**
